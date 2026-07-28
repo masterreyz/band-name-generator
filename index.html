@@ -1,4 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Name Generator</title>
+    
+    <!-- CSS & JS PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            font-size: 24px;
+        }
+        
+        .run-btn {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 5px 15px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+            border-radius: 3px;
+            margin: 0 5px;
+        }
+
+        .header-text {
+            color: #00ff00;
+            margin-bottom: 25px;
+        }
+
+        py-terminal {
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-text">
+        Click <button class="run-btn" onclick="location.reload()">Run</button> to run the final project you will build.
+    </div>
+
+    <!-- Kode Python yang berjalan di dalam terminal interaktif -->
+    <py-script>
 print("Welcome to the Band Name Generator.")
-city = input("Which city did you grow up in?\n")
-pet = input("What is the name of a pet?\n")
+city = input("What's the name of the city you grew up in?\n")
+pet = input("What's your pet's name?\n")
 print("Your band name could be " + city + " " + pet)
+    </py-script>
+
+</body>
+</html>
