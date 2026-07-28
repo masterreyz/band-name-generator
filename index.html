@@ -35,10 +35,6 @@
             color: #00ff00;
             margin-bottom: 25px;
         }
-
-        py-terminal {
-            background-color: transparent !important;
-        }
     </style>
 </head>
 <body>
@@ -47,11 +43,20 @@
         Click <button class="run-btn" onclick="location.reload()">Run</button> to run the final project you will build.
     </div>
 
-    <!-- Kode Python yang berjalan di dalam terminal interaktif -->
     <py-script>
+import js
+
 print("Welcome to the Band Name Generator.")
-city = input("What's the name of the city you grew up in?\n")
-pet = input("What's your pet's name?\n")
+
+# Menerima input via browser prompt secara aman tanpa memicu EOFError
+city_input = js.prompt("What's the name of the city you grew up in?")
+city = str(city_input) if city_input else ""
+
+pet_input = js.prompt("What's your pet's name?")
+pet = str(pet_input) if pet_input else ""
+
+print("What's the name of the city you grew up in?\n" + city)
+print("What's your pet's name?\n" + pet)
 print("Your band name could be " + city + " " + pet)
     </py-script>
 
