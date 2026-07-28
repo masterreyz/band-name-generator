@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Name Generator</title>
     
-    <!-- PyScript Core Terbaru (Mendukung Input Terminal Langsung Tanpa Pop-up) -->
+    <!-- PyScript Core Terbaru -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 
@@ -43,8 +43,8 @@
         Click <button class="run-btn" onclick="location.reload()">Run</button> to run the final project you will build.
     </div>
 
-    <!-- Script type="py" dengan atribut "terminal" akan membuat terminal asli di layar -->
-    <script type="py" terminal>
+    <!-- Menambahkan atribut 'worker' agar input() berjalan mulus di terminal -->
+    <script type="py" terminal worker>
 print("Welcome to the Band Name Generator.")
 city = input("What's the name of the city you grew up in?\n")
 pet = input("What's your pet's name?\n")
