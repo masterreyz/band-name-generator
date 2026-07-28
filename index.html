@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Band Name Generator</title>
-    <!-- Ini adalah alat agar Python bisa berjalan di browser -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
-</head>
-<body style="background-color: #1e1e1e; color: #00ff00; font-family: monospace; padding: 20px;">
-    <h2>Band Name Generator 🎸</h2>
-    <p>Tunggu sebentar sampai sistem siap, lalu cek pop-up di atas layarmu!</p>
+Band Name Generator
     
-    <py-script>
+    
+
+
+    Band Name Generator 🎸
+    Silakan isi pop-up yang muncul di layar!
+    
+    
+import js
+
 print("Welcome to the Band Name Generator.")
-city = input("Which city did you grow up in? ")
-pet = input("What is the name of a pet? ")
+
+# js.prompt digunakan agar browser tidak memblokir input
+city = str(js.prompt("Which city did you grow up in?"))
+pet = str(js.prompt("What is the name of a pet?"))
+
 print("Your band name could be " + city + " " + pet)
-    </py-script>
-</body>
-</html>
